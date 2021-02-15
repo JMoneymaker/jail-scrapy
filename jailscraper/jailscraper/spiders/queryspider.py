@@ -26,7 +26,8 @@ class QuerySpider(scrapy.Spider):
         def extract_by_label(query):
             return response.xpath(f'//label[contains(./text(),"{query}")]/parent::td/following-sibling::td/text()').get(default='').strip()
         
-        yield {
+        booking =  {
+            'url': response.url,
             'swis_id': extract_by_label('SWIS ID'),
             'full_name': extract_by_label('Name'),
             'age': extract_by_label('Age'),
@@ -41,3 +42,5 @@ class QuerySpider(scrapy.Spider):
             'assigned_facility': extract_by_label('Assigned Facility'),
             'projected_release_date': extract_by_label('Projected Release Date')
         }
+
+        yield booking
