@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Dummydata
+jailscraper/Collection.json
+
 # Distribution / packaging
 .Python
 build/

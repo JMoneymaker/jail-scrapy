@@ -8,9 +8,9 @@
 import pymongo
 from itemadapter import ItemAdapter
 
-class JailscraperPipeline:
-    def process_item(self, item, spider):
-        return item
+# class JailscraperPipeline:
+#     def process_item(self, item, spider):
+#         return item
 
 class MongoPipeline:
 
